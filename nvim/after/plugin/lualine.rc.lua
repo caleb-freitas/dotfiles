@@ -8,7 +8,7 @@ end
 lualine.setup {
   options = {
     icons_enabled = false,
-    theme = "catppuccin",
+    theme = "gruvbox",
     section_separators = "",
     component_separators = "",
     disabled_filetypes = {}
@@ -23,9 +23,7 @@ lualine.setup {
     } },
     lualine_x = {
       { "diagnostics", sources = { "nvim_diagnostic" }, symbols = { error = " ", warn = " ", info = " ",
-        hint = " " } },
-      "encoding",
-      "filetype"
+        hint = "" } },
     },
     lualine_y = { "progress" },
     lualine_z = { "location" }

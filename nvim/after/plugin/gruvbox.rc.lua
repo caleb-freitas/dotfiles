@@ -10,4 +10,4 @@ gruvbox.setup({
   contrast = "medium"
 })
 
--- vim.cmd("colorscheme gruvbox")
+vim.cmd("colorscheme gruvbox")
