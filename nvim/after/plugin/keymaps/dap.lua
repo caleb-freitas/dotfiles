@@ -1,4 +1,4 @@
-local Remap = require("caleb.keymap")
+local Remap = require("caleb.utils")
 local nmap = Remap.nnoremap
 
 nmap("<leader>dc", "<cmd>lua require'dap'.continue()<cr>")

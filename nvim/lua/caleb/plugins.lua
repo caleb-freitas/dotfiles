@@ -34,8 +34,7 @@ packer.startup(function(use)
   -- Gruvbox colorscheme
   use "ellisonleao/gruvbox.nvim"
 
-  -- catppuccin colorscheme
-  use { "catppuccin/nvim", as = "catppuccin" }
+  use "bluz71/vim-moonfly-colors"
 
   -- Lua module for asynchronous programming using coroutines
   use "nvim-lua/plenary.nvim"
@@ -46,22 +45,11 @@ packer.startup(function(use)
   -- Provides the same icons as well as colors for each icon
   use "kyazdani42/nvim-web-devicons"
 
-  -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
-  use "jose-elias-alvarez/null-ls.nvim"
-
   -- A Git wrapper so awesome, it should be illegal 
   use "tpope/vim-fugitive"
 
-  -- Designed to make you better at Vim Movements
-  use "ThePrimeagen/vim-be-good"
-
   -- Automatically set up lspconfig for rust-analyzer
   use "simrat39/rust-tools.nvim"
-
-  -- Debug Adapter Protocol client implementation for Neovim
-  use "mfussenegger/nvim-dap"
-  use "rcarriga/nvim-dap-ui"
-  use "ravenxrz/DAPInstall.nvim"
 
   -- Easily install and manage LSP servers, DAP servers, linters, and formatters
   use "williamboman/mason.nvim"
@@ -94,5 +82,4 @@ packer.startup(function(use)
   if packer_bootstrap then
     require('packer').sync()
   end
-
 end)

@@ -1,4 +1,4 @@
-local Remap = require("caleb.keymap")
+local Remap = require("caleb.utils")
 local nnoremap = Remap.nnoremap
 
 nnoremap("gD", "<cmd>lua vim.lsp.buf.declaration()<CR>")
