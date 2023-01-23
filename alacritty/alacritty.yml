@@ -28,33 +28,33 @@ items:
         white: '#ECEFF4'
   - theme: Nord
 colors:
-  # Default colors
+  name: vscode (dark)
+  author: senpai-10
   primary:
-    background: '#000000'
-    foreground: '#b6b6b6'
-
-  # Normal colors
+    background: "#1E1E1E"
+    foreground: "#D4D4D4"
+  cursor:
+    text: "#1d1f21"
+    cursor: "#cccccc"
   normal:
-    black: '#000000'
-    red: '#990000'
-    green: '#00a600'
-    yellow: '#999900'
-    blue: '#0000b2'
-    magenta: '#b200b2'
-    cyan: '#00a6b2'
-    white: '#bfbfbf'
-
-  # Bright colors
+    black: "#000000"
+    red: "#cd3131"
+    green: "#0dbc79"
+    yellow: "#e5e510"
+    blue: "#2472c8"
+    magenta: "#bc3fbc"
+    cyan: "#11a8cd"
+    white: "#e5e5e5"
   bright:
-    black: '#666666'
-    red: '#e50000'
-    green: '#00d900'
-    yellow: '#e5e500'
-    blue: '#0000ff'
-    magenta: '#e500e5'
-    cyan: '#00e5e5'
-    white: '#e5e5e5'
-theme: Terminal-app
+    black: "#666666"
+    red: "#f14c4c"
+    green: "#23d18b"
+    yellow: "#f5f543"
+    blue: "#3b8eea"
+    magenta: "#d670d6"
+    cyan: "#29b8db"
+    white: "#e5e5e5"
+theme: vscode.dark
 
 font:
   normal:

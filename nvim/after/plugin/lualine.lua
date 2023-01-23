@@ -8,7 +8,7 @@ end
 lualine.setup {
   options = {
     icons_enabled = false,
-    theme = "moonfly",
+    theme = "rose-pine",
     section_separators = "",
     component_separators = "",
     disabled_filetypes = {}

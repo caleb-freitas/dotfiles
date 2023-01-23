@@ -18,7 +18,14 @@ vim.cmd [[packadd packer.nvim]]
 packer.startup(function(use)
   -- Plugin/package management for Neovim
   use "wbthomason/packer.nvim"
-  
+  use({
+    'rose-pine/neovim',
+    as = 'rose-pine',
+    config = function()
+        require("rose-pine").setup()
+        vim.cmd('colorscheme rose-pine')
+    end
+  }) 
   -- Neovim statusline written in Lua
   use "nvim-lualine/lualine.nvim"
 
