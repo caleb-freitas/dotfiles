@@ -18,6 +18,8 @@ vim.cmd [[packadd packer.nvim]]
 packer.startup(function(use)
   -- Plugin/package management for Neovim
   use "wbthomason/packer.nvim"
+
+  -- Rose pine colorscheme
   use({
     'rose-pine/neovim',
     as = 'rose-pine',
@@ -26,14 +28,12 @@ packer.startup(function(use)
         vim.cmd('colorscheme rose-pine')
     end
   }) 
+
   -- Neovim statusline written in Lua
   use "nvim-lualine/lualine.nvim"
 
   -- Improve startup time for Neovim
   use "lewis6991/impatient.nvim"
-
-  -- Adds VSCode-like pictograms to neovim built-in lsp
-  use "onsails/lspkind-nvim"
 
   -- Neovim LSP
   use "neovim/nvim-lspconfig"
@@ -41,13 +41,8 @@ packer.startup(function(use)
   -- Gruvbox colorscheme
   use "ellisonleao/gruvbox.nvim"
 
-  use "bluz71/vim-moonfly-colors"
-
   -- Lua module for asynchronous programming using coroutines
   use "nvim-lua/plenary.nvim"
-
-  -- A light-weight lsp plugin with a highly performant UI
-  use "glepnir/lspsaga.nvim"
 
   -- Provides the same icons as well as colors for each icon
   use "kyazdani42/nvim-web-devicons"

@@ -1,21 +1,11 @@
---vim.lsp.set_log_level("debug")
+local nvim_lsp_present, nvim_lsp = pcall(require, "lspconfig")
 
-local status, nvim_lsp = pcall(require, "lspconfig")
-if (not status) then return end
+if not nvim_lsp_present then
+  print("nvim-lspconfig not found")
+  return
+end
 
 local protocol = require('vim.lsp.protocol')
-
-local augroup_format = vim.api.nvim_create_augroup("Format", { clear = true })
-local enable_format_on_save = function(_, bufnr)
-  vim.api.nvim_clear_autocmds({ group = augroup_format, buffer = bufnr })
-  vim.api.nvim_create_autocmd("BufWritePre", {
-    group = augroup_format,
-    buffer = bufnr,
-    callback = function()
-      vim.lsp.buf.format({ bufnr = bufnr })
-    end,
-  })
-end
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer

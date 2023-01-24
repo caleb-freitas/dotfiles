@@ -28,33 +28,38 @@ items:
         white: '#ECEFF4'
   - theme: Nord
 colors:
-  name: vscode (dark)
-  author: senpai-10
+  name: Gnometerm
+  author: ""
   primary:
-    background: "#1E1E1E"
-    foreground: "#D4D4D4"
+    background: "#000000"
+    foreground: "#ffffff"
   cursor:
-    text: "#1d1f21"
-    cursor: "#cccccc"
+    text: "#000000"
+    cursor: "#ffffff"
   normal:
     black: "#000000"
-    red: "#cd3131"
-    green: "#0dbc79"
-    yellow: "#e5e510"
-    blue: "#2472c8"
-    magenta: "#bc3fbc"
-    cyan: "#11a8cd"
-    white: "#e5e5e5"
+    red: "#cc0000"
+    green: "#4e9a06"
+    yellow: "#c4a000"
+    blue: "#3465a4"
+    magenta: "#75507b"
+    cyan: "#06989a"
+    white: "#d3d7cf"
   bright:
-    black: "#666666"
-    red: "#f14c4c"
-    green: "#23d18b"
-    yellow: "#f5f543"
-    blue: "#3b8eea"
-    magenta: "#d670d6"
-    cyan: "#29b8db"
-    white: "#e5e5e5"
-theme: vscode.dark
+    black: "#555753"
+    red: "#ef2929"
+    green: "#8ae234"
+    yellow: "#fce94f"
+    blue: "#729fcf"
+    magenta: "#ad7fa8"
+    cyan: "#34e2e2"
+    white: "#eeeeec"
+theme: Gnometerm
+
+window:
+  padding:
+    x: 0
+    y: 0
 
 font:
   normal:
