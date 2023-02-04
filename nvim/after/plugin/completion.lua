@@ -5,7 +5,9 @@ if not cmp_present then
 	return
 end
 
-local lspkind = require "lspkind"
+local ELLIPSIS_CHAR = '…'
+local MAX_LABEL_WIDTH = 20
+local MIN_LABEL_WIDTH = 20
 
 cmp.setup({
   snippet = {
@@ -19,8 +21,8 @@ cmp.setup({
     -- Add tab support
     ['<S-Tab>'] = cmp.mapping.select_prev_item(),
     ['<Tab>'] = cmp.mapping.select_next_item(),
-    ['<C-S-f>'] = cmp.mapping.scroll_docs(-4),
-    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-u>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-d>'] = cmp.mapping.scroll_docs(4),
     ['<C-Space>'] = cmp.mapping.complete(),
     ['<C-e>'] = cmp.mapping.close(),
     ['<CR>'] = cmp.mapping.confirm({
@@ -34,7 +36,7 @@ cmp.setup({
     { name = 'nvim_lsp', keyword_length = 3 },      -- from language server
     { name = 'nvim_lsp_signature_help'},            -- display function signatures with current parameter emphasized
     { name = 'nvim_lua', keyword_length = 2},       -- complete neovim's Lua runtime API such vim.lsp.*
-    { name = 'buffer', keyword_length = 2 },        -- source current buffer
+    { name = 'buffer', keyword_length = 5 },        -- source current buffer
     { name = 'vsnip', keyword_length = 2 },         -- nvim-cmp source for vim-vsnip 
     { name = 'calc'},                               -- source for math calculation
   },
@@ -43,8 +45,18 @@ cmp.setup({
     documentation = cmp.config.window.bordered(),
   },
   formatting = {
-    format = lspkind.cmp_format({ with_text = false, maxwidth = 50 })
-  }
+    format = function(entry, vim_item)
+      local label = vim_item.abbr
+      local truncated_label = vim.fn.strcharpart(label, 0, MAX_LABEL_WIDTH)
+      if truncated_label ~= label then
+        vim_item.abbr = truncated_label .. ELLIPSIS_CHAR
+      elseif string.len(label) < MIN_LABEL_WIDTH then
+        local padding = string.rep(' ', MIN_LABEL_WIDTH - string.len(label))
+        vim_item.abbr = label .. padding
+      end
+      return vim_item
+    end,
+  },
 })
 
 vim.cmd [[

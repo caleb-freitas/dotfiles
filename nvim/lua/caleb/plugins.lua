@@ -24,10 +24,20 @@ packer.startup(function(use)
     'rose-pine/neovim',
     as = 'rose-pine',
     config = function()
-        require("rose-pine").setup()
+        require("rose-pine").setup({
+          disable_italics = true
+      })
         vim.cmd('colorscheme rose-pine')
     end
   }) 
+
+  -- Comment code
+  use {
+      'numToStr/Comment.nvim',
+      config = function()
+          require('Comment').setup()
+      end
+  }
 
   -- Neovim statusline written in Lua
   use "nvim-lualine/lualine.nvim"
@@ -45,7 +55,7 @@ packer.startup(function(use)
   use "nvim-lua/plenary.nvim"
 
   -- Provides the same icons as well as colors for each icon
-  use "kyazdani42/nvim-web-devicons"
+  -- use "kyazdani42/nvim-web-devicons"
 
   -- A Git wrapper so awesome, it should be illegal 
   use "tpope/vim-fugitive"

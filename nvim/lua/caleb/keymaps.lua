@@ -1,7 +1,7 @@
 local Remap = require("caleb.utils")
 
 local nnoremap = Remap.nnoremap
-local inoremap = Remap.nnoremap
+local inoremap = Remap.inoremap
 local vnoremap = Remap.vnoremap
 local xnoremap = Remap.xnoremap
 
@@ -55,6 +55,8 @@ inoremap("<Insert>", "<Nop>")
 inoremap("<PageUp>", "<Nop>")
 inoremap("<PageDown>", "<Nop>")
 inoremap("<Del>", "<Nop>")
+inoremap("<Home>", "<Nop>")
+inoremap("<End>", "<Nop>")
 
 nnoremap("<Up>", "<Nop>")
 nnoremap("<Down>", "<Nop>")
@@ -65,6 +67,8 @@ nnoremap("<Insert>", "<Nop>")
 nnoremap("<PageUp>", "<Nop>")
 nnoremap("<PageDown>", "<Nop>")
 nnoremap("<Del>", "<Nop>")
+nnoremap("<Home>", "<Nop>")
+nnoremap("<End>", "<Nop>")
 
 vnoremap("<Up>", "<Nop>")
 vnoremap("<Down>", "<Nop>")
@@ -75,6 +79,8 @@ vnoremap("<Insert>", "<Nop>")
 vnoremap("<PageUp>", "<Nop>")
 vnoremap("<PageDown>", "<Nop>")
 vnoremap("<Del>", "<Nop>")
+vnoremap("<Home>", "<Nop>")
+vnoremap("<End>", "<Nop>")
 
 xnoremap("<Up>", "<Nop>")
 xnoremap("<Down>", "<Nop>")
