@@ -23,7 +23,8 @@ ts.setup {
     "css",
     "html",
     "lua",
-    "rust"
+    "rust",
+    "haskell"
   },
   autotag = {
     enable = true,

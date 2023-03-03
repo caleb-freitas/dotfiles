@@ -66,10 +66,11 @@ nvim_lsp.flow.setup {
 }
 
 -- haskell
--- nvim_lsp.hls.setup {
---   on_attach = on_attach,
---   capabilities = capabilities
--- }
+nvim_lsp.hls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "haskell" },
+}
 
 -- astro
 -- nvim_lsp.astro.setup {
@@ -161,9 +162,9 @@ mason.setup()
 
 mason_lspconfig.setup {
   ensure_installed = {
-    "sumneko_lua",
     "rust_analyzer",
     "tsserver",
     "prismals",
+    "hls",
   },
 }

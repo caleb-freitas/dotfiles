@@ -111,6 +111,9 @@ alias lib="cd ~/Library/ && opdf"
 alias opdf='fzf --print0 | xargs -0 sh -c '\''file=$0; if file --mime-type "$file" | grep -q pdf; then nohup evince "$file" & disown; else xdg-open "$file"; fi'\'''
 alias dockerclear="docker-compose down && docker rm -f $(docker ps -a -q) && docker volume rm $(docker volume ls -q)"
 alias tat='~/.config/tmux/tmux-create-attach.sh'
+alias night="redshift -l -19.92:43.93 &"
+alias nnight="kill $(ps aux | grep redshift | awk '{print $2}')"
+alias logout="xfce4-session-logout --logout"
 
 # Ensures that a tmux server is running in every terminal emulator
 _not_inside_tmux() { [[ -z "$TMUX" ]] }
