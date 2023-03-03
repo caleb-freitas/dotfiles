@@ -102,8 +102,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ll="exa -hl"
-alias la="exa -hla"
+alias hh="exa -hl"
+alias ha="exa -hla"
 alias conf="cd ~/.config/"
 alias v="nvim"
 alias dev="cd ~/Projects/"
